@@ -44,12 +44,12 @@ function LoginPage() {
   return (
     <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-[#0a0a0b]">
       {/* Background decoration */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
         <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] bg-primary/20 blur-[120px] rounded-full" />
         <div className="absolute -bottom-[20%] -right-[10%] w-[50%] h-[50%] bg-accent/20 blur-[120px] rounded-full" />
       </div>
 
-      <div className="w-full max-w-md relative z-10 px-6">
+      <div className="w-full max-w-md relative z-20 px-6">
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center h-20 w-20 rounded-2xl bg-primary/10 border border-primary/20 mb-6 shadow-2xl shadow-primary/10 animate-float">
             <ShieldCheck className="h-10 w-10 text-primary" />
