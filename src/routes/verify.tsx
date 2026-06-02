@@ -1,12 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, useRef, useEffect } from "react";
 import { Scanner } from "@yudiel/react-qr-scanner";
-import { parseReceipt, ParsedReceipt } from "@/lib/parseReceipt";
+import type { ParsedReceipt } from "@/lib/parseReceipt";
+import { parseReceipt } from "@/lib/parseReceipt";
 import { normalizeName, similarity } from "@/lib/normalize";
-import { CheckCircle2, ScanLine, Camera, UserCircle2, Loader2, Plus, ShieldCheck, Trash2, XCircle, RefreshCw } from "lucide-react";
+import { CheckCircle2, ScanLine, Camera, UserCircle2, Loader2, Plus, XCircle, RefreshCw } from "lucide-react";
 import { toast } from "sonner";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { StudentForm, Student } from "./students";
+
+import type { Student } from "./students";
 import { supabase } from "@/integrations/supabase/client";
 import { AppShell } from "@/components/AppShell";
 import { Card } from "@/components/ui/card";
@@ -302,7 +303,7 @@ function VerifyPage() {
                   <div className="flex gap-3 pt-2">
                     <Button variant="ghost" onClick={reset} className="flex-1">Annuler</Button>
                     <Button onClick={saveAndNext} disabled={loading} className="flex-1 shadow-premium font-bold">
-                      {loading ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : <ShieldCheck className="h-4 w-4 mr-2" />}
+                      {loading ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : <CheckCircle2 className="h-4 w-4 mr-2" />}
                       Valider & Enregistrer
                     </Button>
                   </div>
@@ -325,7 +326,7 @@ function VerifyPage() {
               <div className="flex flex-col gap-3">
                 <Link to="/face-verify">
                   <Button size="lg" className="w-full gap-2">
-                    <ShieldCheck className="h-5 w-5" /> Aller à la Session Visage
+                    <CheckCircle2 className="h-5 w-5" /> Aller à la Session Visage
                   </Button>
                 </Link>
                 <Button variant="outline" onClick={reset} size="lg">

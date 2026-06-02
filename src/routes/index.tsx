@@ -5,7 +5,7 @@ import { AppShell } from "@/components/AppShell";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
-import { CheckCircle2, XCircle, ScanLine, Users, Wallet, Trash2, ShieldCheck } from "lucide-react";
+import { CheckCircle2, XCircle, ScanLine, Users, Wallet, Trash2 } from "lucide-react";
 import { toast } from "sonner";
 import { getAcademicYear } from "@/lib/utils";
 
