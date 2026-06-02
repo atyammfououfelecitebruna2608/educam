@@ -66,7 +66,7 @@ function Inner() {
 
   return (
     <div className="space-y-8">
-      <header className="flex items-center justify-between">
+      <header className="flex flex-col gap-6 sm:flex-row sm:items-center justify-between">
         <div>
           <h1 className="text-4xl font-extrabold tracking-tight text-gradient">Répertoire Étudiants</h1>
           <p className="text-muted-foreground text-lg mt-1">{students.length} membres enregistrés dans la base.</p>

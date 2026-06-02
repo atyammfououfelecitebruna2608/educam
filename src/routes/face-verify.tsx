@@ -132,7 +132,7 @@ function FaceVerifyPage() {
   return (
     <AppShell>
       <div className="max-w-4xl mx-auto p-4 space-y-6">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col gap-6 md:flex-row md:items-center justify-between">
           <h1 className="text-2xl font-bold flex items-center gap-2">
             <ShieldCheck className="text-primary h-6 w-6" />
             Vérification de Paiement

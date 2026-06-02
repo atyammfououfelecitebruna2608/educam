@@ -118,7 +118,7 @@ function Inner() {
   };
   return (
     <div className="space-y-10">
-      <header className="flex items-end justify-between">
+      <header className="flex flex-col gap-6 sm:flex-row sm:items-end justify-between">
         <div>
           <h1 className="text-4xl font-extrabold tracking-tight text-gradient">Audit des Paiements</h1>
           <p className="text-muted-foreground text-lg mt-1">
